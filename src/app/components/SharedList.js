@@ -7,8 +7,8 @@ import CONFIG from "../config";
 
 const SharedList = () => (
   [
-    <Typography variant="h3">Shared Media</Typography>,
-    <ServerPaginatedTable
+    <Typography key="sl-typo" variant="h3">Shared Media</Typography>,
+    <ServerPaginatedTable key="sl-table"
       columns={
         [
           {
@@ -24,8 +24,8 @@ const SharedList = () => (
       }
       url={`${CONFIG.APIBASE}/v1/shared/media`}
     />,
-    <Typography variant="h3">Shared Categories</Typography>,
-    <ServerPaginatedTable
+    <Typography key="sl-typo2" variant="h3">Shared Categories</Typography>,
+    <ServerPaginatedTable key="sl-table2"
       columns={
         [
           {
@@ -37,8 +37,8 @@ const SharedList = () => (
       }
       url={`${CONFIG.APIBASE}/v1/shared/categories`}
     />,
-    <Typography variant="h3">Shared Links</Typography>,
-    <ServerPaginatedTable
+    <Typography key="sl-typo3" variant="h3">Shared Links</Typography>,
+    <ServerPaginatedTable key="sl-table3"
       columns={
         [
           {

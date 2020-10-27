@@ -5,6 +5,7 @@ import {CssBaseline, MuiThemeProvider} from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Tabs from "@material-ui/core/Tabs";
+import CONFIG from './config';
 import theme from './theme';
 import withStyles from "@material-ui/core/styles/withStyles";
 import Tab from "@material-ui/core/Tab";
@@ -78,11 +79,11 @@ class PageLayout extends Component {
             >
               <Tab value="/archives" label="Archives"/>
               <Tab value="/shared" label="Shared"/>
-              <Tab value="/user" label="Current User"/>
+              {/*<Tab value="/user" label="Authentication Details"/>*/}
             </Tabs>
           </Toolbar>
           <Link
-            href={'documentation/redoc-static.html'}
+            href={CONFIG.DOCUMENTATION_URL}
             target={'#'}
             className={classes.apiLink}
           >
